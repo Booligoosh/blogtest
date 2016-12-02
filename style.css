@@ -1,7 +1,7 @@
 body {
     margin: 0;
     background-attachment: fixed;
-    background-image: linear-gradient( rgba(0, 192, 211, 0.63), rgba(255, 255, 255, 0.63), rgba(222, 97, 255, 0.63) ), url('/w-background.jpg');
+    background-image: linear-gradient( rgba(0, 192, 211, 0.9), rgba(255, 255, 255, 0.9), rgba(222, 97, 255, 0.9) ), url('/w-background.jpg');
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
