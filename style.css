@@ -27,7 +27,7 @@ body {
 }
 
 .sidebar_search input[type=text] {
-    width: 130px;
+    width: /*130px*/100%;
     box-sizing: border-box;
     border: 2px solid #ccc;
     border-radius: 4px;
