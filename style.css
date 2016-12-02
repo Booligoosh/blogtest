@@ -12,11 +12,9 @@ body {
 }
 
 .sidebar {
-    height: 100%;
     padding: 1em;
     width: 15em;
     text-align: left;
-    background-color: #aaa;
 }
 
 .sidebar_wrapper {
@@ -25,6 +23,7 @@ body {
     top: 0;
     bottom: 0;
     height: 100%;
+    background-color: /*#eee*/ none;
 }
 
 .sidebar_search input[type=text] {
