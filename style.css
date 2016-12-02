@@ -35,7 +35,7 @@ body {
 .sidebar_wrapper {
     position: absolute;
     right: 0;
-    top: 0;
+    top: 13.37em;
     bottom: 0;
     height: 100%;
     background-color: /*#eee*/ none;
