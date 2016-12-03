@@ -1,0 +1,16 @@
+<div class="sidebar_wrapper">
+    <script>
+        $('.sidebar_wrapper').load('../sidebar.html');
+    </script>
+</div>
+<div class="page">
+    <div class="header">
+        <h1>Booligoosh Blog</h1>
+    </div>
+    <div class="post">
+    </div>
+</div>
+<script>
+    document.getElementsByClassName('post')[0].innerHTML = document.getElementsByClassName('post_data')[0].innerHTML;
+    document.title = document.getElementById('data_title').innerHTML;
+</script>

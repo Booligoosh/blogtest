@@ -1,10 +1,27 @@
 <div class="sidebar">
-	<div class="sidebar_search">
-		<input type="text" name="search" placeholder="Find awesome stuff...">
-	</div>
-	<ul class="posts">
-		<a href="#" class="sidebar_link sidebar_posts_link">
-			<li>My first post!</li>
-		</a>
-	</ul>
+    <div class="sidebar_search">
+        <input type="text" name="search" placeholder="Find stuff...">
+    </div>
+    <ul class="posts">
+    </ul>
 </div>
+<script>
+    window.addEventListener("scroll", scrollFunc);
+    scrollFunc();
+
+    function scrollFunc() {
+        var rect1 = document.getElementsByClassName('sidebar')[0].getBoundingClientRect();
+        var rect2 = document.getElementsByClassName('post')[0].getBoundingClientRect();
+        var overlap = !(rect1.right < rect2.left ||
+            rect1.left > rect2.right ||
+            rect1.bottom < rect2.top ||
+            rect1.top > rect2.bottom)
+        console.log(overlap);
+        if (overlap) {
+            document.getElementsByClassName('sidebar')[0].style.width = '10.5em';
+        } else {
+            document.getElementsByClassName('sidebar')[0].style.width = '15em';
+        }
+    }
+</script>
+<script src="/posts_index.js"></script>

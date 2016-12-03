@@ -2,9 +2,15 @@
 body {
     margin: 0;
     background-attachment: fixed;
-    background-image: linear-gradient( rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)), url('/w-background.jpg');    background-position: center center;
+    background-image: linear-gradient( rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)), url('https://booligoosh.github.io/w-background.jpg');
+    background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
+}
+
+.data,
+#data {
+    display: none;
 }
 
 .header h1 {
@@ -15,7 +21,14 @@ body {
 }
 
 .post {
-    padding: 5em;
+    padding-top: 0;
+    padding-bottom: 5em;
+    padding-left: 12.5em;
+    padding-right: 12.5em
+}
+
+.post p {
+    font-size: 1.2em;
 }
 
 .page {
@@ -29,20 +42,23 @@ body {
     width: 15em;
     text-align: left;
     font-family: 'Oxygen', sans-serif;
-
 }
 
 .sidebar_wrapper {
-    position: absolute;
+    position: fixed;
     right: 0;
     top: 13.37em;
     bottom: 0;
     height: 100%;
-    background-color: /*#eee*/ none;
+    background-color: /*#eee*/
+    none;
+    -webkit-transition: width .4s ease-in-out;
+    transition: width .4s ease-in-out;
 }
 
 .sidebar_search input[type=text] {
-    width: /*130px*/100%;
+    width: /*130px*/
+    100%;
     box-sizing: border-box;
     border: 2px solid #ccc;
     border-radius: 4px;
@@ -52,11 +68,13 @@ body {
     background-position: 10px 12px;
     background-repeat: no-repeat;
     padding: 12px 20px 12px 40px;
-    -webkit-transition: width .4s ease-in-out;
-    transition: width .4s ease-in-out;
+    /*-webkit-transition: width .4s ease-in-out;
+    transition: width .4s ease-in-out;*/
 }
 
+
 /* When the input field gets focus, change its width to 100% */
+
 input[type=text]:focus {
     width: 100%;
 }
