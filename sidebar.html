@@ -16,12 +16,21 @@
             rect1.left > rect2.right ||
             rect1.bottom < rect2.top ||
             rect1.top > rect2.bottom)
+        if (!overlap) {
+            rect1 = document.getElementsByClassName('sidebar')[0].getBoundingClientRect();
+            rect2 = document.getElementsByClassName('header')[0].getBoundingClientRect();
+            overlap = !(rect1.right < rect2.left ||
+                rect1.left > rect2.right ||
+                rect1.bottom < rect2.top ||
+                rect1.top > rect2.bottom)
+        }
         console.log(overlap);
         if (overlap) {
             document.getElementsByClassName('sidebar')[0].style.width = '10.5em';
         } else {
             document.getElementsByClassName('sidebar')[0].style.width = '15em';
         }
+        document.getElementsByClassName('sidebar')[0].get
     }
 </script>
-<script src="/blog/posts_index.js"></script>
+<script src="/posts_index.js"></script>
