@@ -1,5 +1,5 @@
 var posts_folder = '/blog/posts';
-var posts = ['test.html'];
+var posts = ['test.html','test2.html'];
 for (var i = 0; i < posts.length; i++) {
   posts[i] = posts_folder + '/' + posts[i];
 }
