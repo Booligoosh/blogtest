@@ -32,6 +32,11 @@ body {
     margin-bottom: 1em;
 }
 
+#disqus_thread {
+    padding-left: 12.5em;
+    padding-right: 12.5em
+}
+
 .post {
     padding-top: 0;
     padding-bottom: 5em;
