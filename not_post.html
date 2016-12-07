@@ -9,6 +9,40 @@
     </div>
     <div class="post">
     </div>
+    <script>
+        var segments = window.location.pathname.split('/');
+var toDelete = [];
+for (var i = 0; i < segments.length; i++) {
+    if (segments[i].length < 1) {
+        toDelete.push(i);
+    }
+}
+for (var i = 0; i < toDelete.length; i++) {
+    segments.splice(i, 1);
+}
+var filename = segments[segments.length - 1];
+        </script>
+    <div id="disqus_thread"></div>
+<script>
+
+/**
+*  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+*  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+
+var disqus_config = function () {
+this.page.url = 'https://' + window.location.host + window.location.pathname;  // Replace PAGE_URL with your page's canonical URL variable
+this.page.identifier = filename; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+};
+
+(function() { // DON'T EDIT BELOW THIS LINE
+var d = document, s = d.createElement('script');
+s.src = '//booligoosh-github-io.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+                                
 </div>
 <script>
     document.getElementsByClassName('post')[0].innerHTML = document.getElementsByClassName('post_data')[0].innerHTML;
