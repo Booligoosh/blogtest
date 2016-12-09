@@ -1,15 +1,28 @@
-var posts_folder = '/blog/posts';
+console.log("ready!");
+var posts_folder = '/posts';
 var posts = ['test.html', 'test2.html'];
+var posts_html = [];
 for (var i = 0; i < posts.length; i++) {
     posts[i] = posts_folder + '/' + posts[i];
 }
+i = 0;
 
 for (var i = 0; i < posts.length; i++) {
-    var sidebar_link_post_html;
     $.get(posts[i], function (data) {
-        sidebar_link_post_html = data.responseText;
+        posts_html.push(data);
+
     });
-    console.log(sidebar_link_post_html);
-    var name = sidebar_link_post_html.match(/<title[^>]*>([^<]+)<\/title>/)[1];
-    document.getElementsByClassName('posts')[0].innerHTML = document.getElementsByClassName('posts')[0].innerHTML + '<a href="' + posts[i] + '" class="sidebar_link sidebar_posts_link"><li>' + name + '</li></a>'
+
 }
+
+i = 0;
+
+/*for (var i = 0; i < posts.length; i++) {
+    var post_html = posts_html[i];
+    var link = posts[i];
+    console.log(i);
+    name = $(post_html)[5].childNodes[1].innerHTML;
+    document.getElementsByClassName('posts')[0].innerHTML = document.getElementsByClassName('posts')[0].innerHTML + '<a href="' + link + '" class="sidebar_link sidebar_posts_link"><li>' + name + '</li></a>'
+    console.log(name + ' - ' + posts + ' - ' + i + ' - ' + posts[i] + ' - ' + link);
+
+}*/
