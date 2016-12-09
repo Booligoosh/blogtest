@@ -23,4 +23,4 @@ for (var i = 0; i < posts.length; i++) {
     console.log(name + ' - ' + posts + ' - ' + i + ' - ' + posts[i] + ' - ' + link);
 
 }
-},500);});
+},5000);});
