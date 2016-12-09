@@ -1,5 +1,5 @@
 console.log("ready!");
-var posts_folder = '/posts';
+var posts_folder = '/blog/posts';
 var posts = ['test.html', 'test2.html'];
 var posts_html = [];
 for (var i = 0; i < posts.length; i++) {
