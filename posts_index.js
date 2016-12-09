@@ -7,7 +7,7 @@ for (var i = 0; i < posts.length; i++) {
 for (var i = 0; i < posts.length; i++) {
     var sidebar_link_post_html;
     $.get(posts[i], function (data) {
-        sidebar_link_post_html = data;
+        sidebar_link_post_html = data.responseText;
     });
     console.log(sidebar_link_post_html);
     var name = sidebar_link_post_html.match(/<title[^>]*>([^<]+)<\/title>/)[1];
